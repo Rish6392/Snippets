@@ -9,7 +9,7 @@ type ErrorPageProps = {
 const ErrorPage = ({error}:ErrorPageProps) => {
   return (
     <div>
-      Error Pge
+      Error Page
     </div>
   )
 }

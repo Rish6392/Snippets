@@ -9,7 +9,7 @@ const SnippetDetailPage = async ({params}:{params:Promise<{id:string}>}) => {
   //fetch id
   const id = parseInt((await params).id);
 
-  await new Promise((r)=>setTimeout(r,2000));
+  //await new Promise((r)=>setTimeout(r,2000));
 
   const snippet = await prisma.snippet.findUnique({
     where:{
@@ -44,6 +44,8 @@ const SnippetDetailPage = async ({params}:{params:Promise<{id:string}>}) => {
 export default SnippetDetailPage
 
 //static banana hai 
+//for handling catching 
+// yaad rakho isse 
 export const generateStaticParams = async () =>{
   const snippets = await prisma.snippet.findMany();
 
